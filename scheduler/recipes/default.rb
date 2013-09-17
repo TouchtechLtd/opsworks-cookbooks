@@ -6,7 +6,7 @@ node[:deploy].each do |application, deploy|
 
   stack_name = node[:opsworks][:stack][:name]
 
-  Chef::Log.Debug("Executing command:  bundle exec whenever --update-crontab '#{stack_name}_#{deploy[:rails_env]}' in dir: #{File.join(deploy[:deploy_to], 'current')}")
+  Chef::Log.debug("Executing command:  bundle exec whenever --update-crontab '#{stack_name}_#{deploy[:rails_env]}' in dir: #{File.join(deploy[:deploy_to], 'current')}")
 
   execute "rake whenever to update crontab" do
     cwd "#{File.join(deploy[:deploy_to], 'current')}"
