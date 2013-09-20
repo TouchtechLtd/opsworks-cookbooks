@@ -14,9 +14,6 @@ node[:deploy].each do |application, deploy|
       mode 0770
       recursive true
       action :create
-      only_if do
-        !File.exists?(env_dir_path)
-      end
     end
 
     env_file_path = "#{deploy[:deploy_to]}/shared/config/environment_variables.rb"
