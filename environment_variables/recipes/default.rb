@@ -4,14 +4,7 @@ node[:deploy].each do |application, deploy|
 
   if node[:env]
 
-    Chef::Log.info('Env variables set 6')
-
-    Chef::Log.info("Opsworks deploy dir is #{opsworks_deploy_dir} ")
-    opsworks_deploy_dir do
-      user deploy[:user]
-      group deploy[:group]
-      path deploy[:deploy_to]
-    end
+    Chef::Log.info("Env variables set")
 
     env_dir_path = "#{deploy[:deploy_to]}/shared/config"
     Chef::Log.info("Creating enclosing directory #{env_dir_path} if it doesn't exist")
