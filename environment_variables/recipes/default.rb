@@ -6,18 +6,23 @@ node[:deploy].each do |application, deploy|
 
     Chef::Log.info('Env variables set')
 
-    Chef::Log.info('Debug root path2')
-    bash 'debug_deployto' do
-      code <<-EOH
+    Chef::Log.info('Debug root path3')
+    execute 'debug_deployto' do
+      command %Q{
         ls -la #{deploy[:deploy_to]} >> /tmp/env_vars_log
-      EOH
+      }
+    end
+    execute 'debug_deployto2' do
+      command %Q{
+        ls -la #{deploy[:deploy_to]}
+      }
     end
 
     Chef::Log.info('Debug full path')
-    bash 'debug_deployto_full' do
-      code <<-EOH
+    execute 'debug_deployto_full' do
+      command %Q{
         ls -la #{deploy[:deploy_to]}/shared/config >> /tmp/env_vars_log
-      EOH
+      }
     end
 
     env_dir_path = "#{deploy[:deploy_to]}/shared/config"
