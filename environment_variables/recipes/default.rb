@@ -4,7 +4,21 @@ node[:deploy].each do |application, deploy|
 
   if node[:env]
 
-    Chef::Log.info("Env variables set")
+    Chef::Log.info('Env variables set')
+
+    Chef::Log.info('Debug root path')
+    bash 'debug_deployto' do
+      code <<-EOH
+        ls -la #{deploy[:deploy_to]}
+      EOH
+    end
+
+    Chef::Log.info('Debug full path')
+    bash 'debug_deployto_full' do
+      code <<-EOH
+        ls -la #{deploy[:deploy_to]}/shared/config
+      EOH
+    end
 
     env_dir_path = "#{deploy[:deploy_to]}/shared/config"
     Chef::Log.info("Creating enclosing directory #{env_dir_path} if it doesn't exist")
