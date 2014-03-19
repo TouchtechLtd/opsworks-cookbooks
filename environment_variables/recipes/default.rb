@@ -14,8 +14,16 @@ node[:deploy].each do |application, deploy|
       action :create
     end
 
-    file File.join(deploy[:deploy_to], 'shared', 'config', 'environment_variables_test.rb') do
-      content 'it worked'
+    env_vars_content = '# generated file do not edit'
+    env_vars_content = env_vars_content + "\n\n"
+    node[:env].each_pair do |env_var, var_val|
+      unless env_var == 'PORT' || env_var == 'RACK_ENV'
+        env_vars_content = env_vars_content + "\nENV['%{env_var}'] = '%{var_val}'"
+      end
+    end
+
+    file File.join(deploy[:deploy_to], 'shared', 'config', 'environment_variables.rb') do
+      content env_vars_content
     end
 
     #env_dir_path = "#{deploy[:deploy_to]}/shared/config"
