@@ -4,25 +4,13 @@ node[:deploy].each do |application, deploy|
 
   if node[:env]
 
-    Chef::Log.info('Env variables set')
+    Chef::Log.info('Env variables set 6')
 
-    Chef::Log.info('Debug root path3')
-    execute 'debug_deployto' do
-      command %Q{
-        ls -la #{deploy[:deploy_to]} >> /tmp/env_vars_log
-      }
-    end
-    execute 'debug_deployto2' do
-      command %Q{
-        ls -la #{deploy[:deploy_to]}
-      }
-    end
-
-    Chef::Log.info('Debug full path')
-    execute 'debug_deployto_full' do
-      command %Q{
-        ls -la #{deploy[:deploy_to]}/shared/config >> /tmp/env_vars_log
-      }
+    Chef::Log.info("Opsworks deploy dir is #{opsworks_deploy_dir} ")
+    opsworks_deploy_dir do
+      user deploy[:user]
+      group deploy[:group]
+      path deploy[:deploy_to]
     end
 
     env_dir_path = "#{deploy[:deploy_to]}/shared/config"
@@ -35,6 +23,7 @@ node[:deploy].each do |application, deploy|
       action :create
     end
 
+    #  /srv/www/posboss/shared/config/environment_variables.rb
     env_file_path = "#{deploy[:deploy_to]}/shared/config/environment_variables.rb"
     Chef::Log.info("Writing variables to #{env_file_path}")
     template env_file_path do
