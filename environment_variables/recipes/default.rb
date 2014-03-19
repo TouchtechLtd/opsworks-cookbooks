@@ -18,7 +18,7 @@ node[:deploy].each do |application, deploy|
     env_vars_content = env_vars_content + "\n\n"
     node[:env].each_pair do |env_var, var_val|
       unless env_var == 'PORT' || env_var == 'RACK_ENV'
-        env_vars_content = env_vars_content + "\nENV['%{env_var}'] = '%{var_val}'"
+        env_vars_content = env_vars_content + "\nENV['#{env_var}'] = '#{var_val}'"
       end
     end
 
