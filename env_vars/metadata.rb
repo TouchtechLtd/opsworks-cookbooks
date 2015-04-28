@@ -1,0 +1,1 @@
+depends 'magic_shell'
