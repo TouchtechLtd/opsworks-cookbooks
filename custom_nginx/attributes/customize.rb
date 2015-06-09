@@ -1,1 +1,1 @@
-normal[:nginx][:client_max_body_size] = '20m'
+normal[:nginx][:client_max_body_size] = '500m'
