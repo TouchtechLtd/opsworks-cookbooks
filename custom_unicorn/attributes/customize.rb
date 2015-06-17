@@ -1,1 +1,1 @@
-node[:unicorn][:timeout] = 1800
+node.default[:unicorn][:timeout] = 1800
