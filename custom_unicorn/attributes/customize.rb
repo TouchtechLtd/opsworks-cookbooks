@@ -1,0 +1,1 @@
+node[:unicorn][:timeout] = 1800
