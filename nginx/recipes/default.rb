@@ -8,9 +8,9 @@
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-# 
+#
 #     http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -30,6 +30,17 @@ directory node[:nginx][:log_dir] do
   mode 0755
   owner node[:nginx][:user]
   action :create
+end
+
+ssl_dhparam = File.join(node[:nginx][:dir], "dhparams.pem")
+if ! File.exists?(ssl_dhparam)
+  file ssl_dhparam do
+    content `openssl dhparam 2048 2>/dev/null`
+    mode "0644"
+    owner "root"
+    group "root"
+    action :create_if_missing
+  end
 end
 
 %w{sites-available sites-enabled conf.d}.each do |dir|
