@@ -1,1 +1,1 @@
-normal[:nginx][:client_max_body_size] = '500m'
+normal[:nginx][:client_max_body_size] = node[:nginx][:client_max_body_size] || '500m'
