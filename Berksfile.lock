@@ -1,14 +1,54 @@
 DEPENDENCIES
+  custom_nginx
+    path: custom_nginx
+  custom_nginx_10mb_request_limit
+    path: custom_nginx_10mb_request_limit
+  custom_nginx_300s_proxy_timeout
+    path: custom_nginx_300s_proxy_timeout
+  custom_unicorn
+    path: custom_unicorn
+  deploy_notification
+    path: deploy_notification
+  env_vars
+    path: env_vars
+  environment_variables
+    path: environment_variables
+  imagemagick
+    path: imagemagick
   lets_encrypt_ssl
     path: lets_encrypt_ssl
+  magic_shell
+    path: magic_shell
+  nginx
+    path: nginx
+  nginx_large_uploads
+    path: nginx_large_uploads
   opsworks-cookbooks
     path: .
     metadata: true
+  shared_assets
+    path: shared_assets
+  sidekiq
+    path: sidekiq
 
 GRAPH
   acme (3.0.0)
     compat_resource (>= 12.19)
   compat_resource (12.19.0)
+  custom_nginx (0.1.0)
+  custom_nginx_10mb_request_limit (0.1.0)
+  custom_nginx_300s_proxy_timeout (0.1.0)
+  custom_unicorn (0.1.0)
+  deploy_notification (0.1.0)
+  env_vars (0.1.0)
+    magic_shell (>= 0.0.0)
+  environment_variables (0.1.0)
+  imagemagick (0.1.0)
   lets_encrypt_ssl (0.1.0)
     acme (>= 0.0.0)
+  magic_shell (1.0.0)
+  nginx (1.0.0)
+  nginx_large_uploads (0.1.0)
   opsworks-cookbooks (1.0.0)
+  shared_assets (0.1.0)
+  sidekiq (0.1.0)
