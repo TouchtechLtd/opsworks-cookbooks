@@ -1,0 +1,14 @@
+DEPENDENCIES
+  lets_encrypt_ssl
+    path: lets_encrypt_ssl
+  opsworks-cookbooks
+    path: .
+    metadata: true
+
+GRAPH
+  acme (3.0.0)
+    compat_resource (>= 12.19)
+  compat_resource (12.19.0)
+  lets_encrypt_ssl (0.1.0)
+    acme (>= 0.0.0)
+  opsworks-cookbooks (1.0.0)
