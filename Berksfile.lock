@@ -32,9 +32,7 @@ DEPENDENCIES
     path: sidekiq
 
 GRAPH
-  acme (3.0.0)
-    compat_resource (>= 12.19)
-  compat_resource (12.19.0)
+  acme (2.0.0)
   custom_nginx (0.1.0)
   custom_nginx_10mb_request_limit (0.1.0)
   custom_nginx_300s_proxy_timeout (0.1.0)
@@ -45,7 +43,7 @@ GRAPH
   environment_variables (0.1.0)
   imagemagick (0.1.0)
   lets_encrypt_ssl (0.1.0)
-    acme (>= 0.0.0)
+    acme (= 2.0.0)
   magic_shell (1.0.0)
   nginx (1.0.0)
   nginx_large_uploads (0.1.0)
