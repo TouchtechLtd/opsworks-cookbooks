@@ -34,11 +34,8 @@ server {
   access_log  <%= node[:nginx][:log_dir] %>/<%= @application[:domains].first %>-ssl.access.log;
   
   ssl on;
-  ssl_certificate <%= node[:nginx][:dir] %>/ssl/<%= @application[:domains].first %>.crt;
-  ssl_certificate_key <%= node[:nginx][:dir] %>/ssl/<%= @application[:domains].first %>.key;
-  <% if @application[:ssl_certificate_ca] -%>
-  ssl_client_certificate <%= node[:nginx][:dir] %>/ssl/<%= @application[:domains].first %>.ca;
-  <% end -%>
+  ssl_certificate /etc/letsencrypt/live/<%= @application[:domains].first %>/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/<%= @application[:domains].first %>/privkey.pem;
 
   location / {
     root   <%= @application[:absolute_document_root] %>;
