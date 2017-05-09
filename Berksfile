@@ -14,5 +14,6 @@ cookbook 'nginx', path: 'nginx'
 cookbook 'nginx_large_uploads', path: 'nginx_large_uploads'
 cookbook 'shared_assets', path: 'shared_assets'
 cookbook 'sidekiq', path: 'sidekiq'
+cookbook 'unicorn_lets_encrypt', path: 'unicorn_lets_encrypt'
 
 metadata

@@ -30,9 +30,12 @@ DEPENDENCIES
     path: shared_assets
   sidekiq
     path: sidekiq
+  unicorn_lets_encrypt
+    path: unicorn_lets_encrypt
 
 GRAPH
   acme (2.0.0)
+  apache2 (3.3.0)
   custom_nginx (0.1.0)
   custom_nginx_10mb_request_limit (0.1.0)
   custom_nginx_300s_proxy_timeout (0.1.0)
@@ -48,5 +51,13 @@ GRAPH
   nginx (1.0.0)
   nginx_large_uploads (0.1.0)
   opsworks-cookbooks (1.0.0)
+  rails (0.9.2)
+    apache2 (>= 0.0.0)
+    ruby (>= 0.0.0)
+  ruby (1.0.0)
   shared_assets (0.1.0)
   sidekiq (0.1.0)
+  unicorn_lets_encrypt (1.0.0)
+    apache2 (>= 0.0.0)
+    nginx (>= 0.0.0)
+    rails (>= 0.0.0)
