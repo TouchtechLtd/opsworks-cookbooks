@@ -23,6 +23,8 @@ DEPENDENCIES
     path: nginx
   nginx_large_uploads
     path: nginx_large_uploads
+  nrpe_client
+    path: nrpe_client
   opsworks-cookbooks
     path: .
     metadata: true
@@ -50,6 +52,7 @@ GRAPH
   magic_shell (1.0.0)
   nginx (1.0.0)
   nginx_large_uploads (0.1.0)
+  nrpe_client (0.1.0)
   opsworks-cookbooks (1.0.0)
   rails (0.9.2)
     apache2 (>= 0.0.0)
