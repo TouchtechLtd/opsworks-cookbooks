@@ -16,5 +16,6 @@ cookbook 'nrpe_client', path: 'nrpe_client'
 cookbook 'shared_assets', path: 'shared_assets'
 cookbook 'sidekiq', path: 'sidekiq'
 cookbook 'unicorn_lets_encrypt', path: 'unicorn_lets_encrypt'
+cookbook 'unicorn', path: 'unicorn'
 
 metadata
