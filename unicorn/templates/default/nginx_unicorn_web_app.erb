@@ -57,7 +57,7 @@ server {
     proxy_set_header Connection "upgrade";
     proxy_read_timeout 86400;
   }
-
+  
   location /nginx_status {
     stub_status on;
     access_log off;
