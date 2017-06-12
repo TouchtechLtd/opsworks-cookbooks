@@ -21,5 +21,5 @@ template '/etc/nagios/nrpe.cfg' do
 end
 
 service "nrpe" do
-  action [:enable, :start]
+  action [:enable, :restart]
 end 
