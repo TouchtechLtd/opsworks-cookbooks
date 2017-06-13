@@ -5,8 +5,6 @@ DEPENDENCIES
     path: custom_nginx_10mb_request_limit
   custom_nginx_300s_proxy_timeout
     path: custom_nginx_300s_proxy_timeout
-  custom_unicorn
-    path: custom_unicorn
   deploy_notification
     path: deploy_notification
   env_vars
@@ -32,8 +30,6 @@ DEPENDENCIES
     path: shared_assets
   sidekiq
     path: sidekiq
-  unicorn_lets_encrypt
-    path: unicorn_lets_encrypt
 
 GRAPH
   acme (2.0.0)
@@ -41,7 +37,6 @@ GRAPH
   custom_nginx (0.1.0)
   custom_nginx_10mb_request_limit (0.1.0)
   custom_nginx_300s_proxy_timeout (0.1.0)
-  custom_unicorn (0.1.0)
   deploy_notification (0.1.0)
   env_vars (0.1.0)
     magic_shell (>= 0.0.0)
@@ -60,7 +55,3 @@ GRAPH
   ruby (1.0.0)
   shared_assets (0.1.0)
   sidekiq (0.1.0)
-  unicorn_lets_encrypt (1.0.0)
-    apache2 (>= 0.0.0)
-    nginx (>= 0.0.0)
-    rails (>= 0.0.0)
