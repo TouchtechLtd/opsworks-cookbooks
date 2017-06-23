@@ -87,6 +87,7 @@ server {
 
   keepalive_timeout 5;
   server_tokens off;
+  ssl_protocols TLSv1.1 TLSv1.2;
 
   root <%= @application[:absolute_document_root] %>;
 
