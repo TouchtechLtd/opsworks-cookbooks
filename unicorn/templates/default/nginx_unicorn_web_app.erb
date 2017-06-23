@@ -15,6 +15,7 @@ server {
   <%end %>
 
   keepalive_timeout 5;
+  server_tokens off;
 
   root <%= @application[:absolute_document_root] %>;
 
@@ -85,6 +86,7 @@ server {
   <% end -%>
 
   keepalive_timeout 5;
+  server_tokens off;
 
   root <%= @application[:absolute_document_root] %>;
 
