@@ -21,7 +21,7 @@ cookbook 'unicorn', path: 'unicorn'
 # Overrides to make sure we get the opsworks books from the opsworks repository
 # Pulled from tag v3452, commit 8a9f6ef
 cookbook 'agent_version', '1.0.0', github: 'aws/opsworks-cookbooks', branch: 'release-chef-11.10', rel: 'agent_version'
-cookbook 'apache2', '1.0.0', github: 'aws/opsworks-cookbooks', branch: 'release-chef-11.10', rel: 'apache2'
+#cookbook 'apache2', '1.0.0', github: 'aws/opsworks-cookbooks', branch: 'release-chef-11.10', rel: 'apache2'
 cookbook 'dependencies', '1.0.0', github: 'aws/opsworks-cookbooks', branch: 'release-chef-11.10', rel: 'dependencies'
 cookbook 'deploy', '1.0.0', github: 'aws/opsworks-cookbooks', branch: 'release-chef-11.10', rel: 'deploy'
 cookbook 'ebs', '1.0.0', github: 'aws/opsworks-cookbooks', branch: 'release-chef-11.10', rel: 'ebs'
