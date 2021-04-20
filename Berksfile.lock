@@ -1,4 +1,14 @@
 DEPENDENCIES
+  agent_version
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: agent_version
+  apache2
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: apache2
   custom_nginx
     path: custom_nginx
   custom_nginx_10mb_request_limit
@@ -7,18 +17,58 @@ DEPENDENCIES
     path: custom_nginx_300s_proxy_timeout
   custom_unicorn
     path: custom_unicorn
+  dependencies
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: dependencies
+  deploy
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: deploy
   deploy_notification
     path: deploy_notification
+  ebs
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: ebs
   env_vars
     path: env_vars
   environment_variables
     path: environment_variables
+  gem_support
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: gem_support
+  haproxy
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: haproxy
   imagemagick
     path: imagemagick
   lets_encrypt_ssl
     path: lets_encrypt_ssl
   magic_shell
     path: magic_shell
+  memcached
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: memcached
+  mod_php5_apache2
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: mod_php5_apache2
+  mysql
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: mysql
   nginx
     path: nginx
   nginx_large_uploads
@@ -28,38 +78,271 @@ DEPENDENCIES
   opsworks-cookbooks
     path: .
     metadata: true
+  opsworks_agent_monit
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_agent_monit
+  opsworks_aws_flow_ruby
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_aws_flow_ruby
+  opsworks_berkshelf
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_berkshelf
+  opsworks_bundler
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_bundler
+  opsworks_cleanup
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_cleanup
+  opsworks_cloudwatchlogs
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_cloudwatchlogs
+  opsworks_commons
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_commons
+  opsworks_custom_cookbooks
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_custom_cookbooks
+  opsworks_ecs
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_ecs
+  opsworks_ganglia
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_ganglia
+  opsworks_initial_setup
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_initial_setup
+  opsworks_java
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_java
+  opsworks_nodejs
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_nodejs
+  opsworks_postgresql
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_postgresql
+  opsworks_rubygems
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_rubygems
+  opsworks_shutdown
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_shutdown
+  opsworks_stack_state_sync
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: opsworks_stack_state_sync
+  packages
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: packages
+  passenger_apache2
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: passenger_apache2
+  php
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: php
+  rails
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: rails
+  ruby
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: ruby
+  s3_file
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: s3_file
+  scm_helper
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: scm_helper
   shared_assets
     path: shared_assets
   sidekiq
     path: sidekiq
+  ssh_host_keys
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: ssh_host_keys
+  ssh_users
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: ssh_users
+  test_suite
+    git: https://github.com/aws/opsworks-cookbooks.git
+    revision: 8a9f6efdaf4628a09fc81aa720dc836bc9ffc58c
+    branch: release-chef-11.10
+    rel: test_suite
+  unicorn
+    path: unicorn
   unicorn_lets_encrypt
     path: unicorn_lets_encrypt
 
 GRAPH
   acme (2.0.0)
-  apache2 (3.3.0)
+  agent_version (1.0.0)
+    opsworks_initial_setup (>= 0.0.0)
+  apache2 (1.0.0)
   custom_nginx (0.1.0)
   custom_nginx_10mb_request_limit (0.1.0)
   custom_nginx_300s_proxy_timeout (0.1.0)
   custom_unicorn (0.1.0)
+  dependencies (1.0.0)
+    gem_support (>= 0.0.0)
+    opsworks_nodejs (>= 0.0.0)
+    packages (>= 0.0.0)
+    ruby (>= 0.0.0)
+  deploy (1.0.0)
+    apache2 (>= 0.0.0)
+    dependencies (>= 0.0.0)
+    mod_php5_apache2 (>= 0.0.0)
+    mysql (>= 0.0.0)
+    nginx (>= 0.0.0)
+    opsworks_agent_monit (>= 0.0.0)
+    opsworks_aws_flow_ruby (>= 0.0.0)
+    opsworks_java (>= 0.0.0)
+    opsworks_nodejs (>= 0.0.0)
+    opsworks_postgresql (>= 0.0.0)
+    passenger_apache2 (>= 0.0.0)
+    php (>= 0.0.0)
+    scm_helper (>= 0.0.0)
+    ssh_users (>= 0.0.0)
+    unicorn (>= 0.0.0)
   deploy_notification (0.1.0)
+  ebs (1.0.0)
   env_vars (0.1.0)
     magic_shell (>= 0.0.0)
   environment_variables (0.1.0)
+  gem_support (1.0.0)
+  haproxy (1.0.0)
+    opsworks_commons (>= 0.0.0)
   imagemagick (0.1.0)
   lets_encrypt_ssl (0.1.0)
     acme (= 2.0.0)
   magic_shell (1.0.0)
+  memcached (1.0.0)
+    opsworks_agent_monit (>= 0.0.0)
+  mod_php5_apache2 (1.0.0)
+    apache2 (>= 0.0.0)
+    deploy (>= 0.0.0)
+  mysql (1.0.0)
+    opsworks_commons (>= 0.0.0)
   nginx (1.0.0)
   nginx_large_uploads (0.1.0)
   nrpe_client (0.1.1)
   opsworks-cookbooks (1.0.0)
-  rails (0.9.2)
+  opsworks_agent_monit (1.0.0)
+    opsworks_initial_setup (>= 0.0.0)
+  opsworks_aws_flow_ruby (1.0.0)
+  opsworks_berkshelf (1.1.0)
+    opsworks_commons (>= 0.0.0)
+    scm_helper (>= 0.0.0)
+  opsworks_bundler (1.0.0)
+  opsworks_cleanup (1.0.0)
+    opsworks_initial_setup (>= 0.0.0)
+  opsworks_cloudwatchlogs (1.0.0)
+  opsworks_commons (1.0.0)
+    dependencies (>= 0.0.0)
+  opsworks_custom_cookbooks (1.0.0)
+    opsworks_berkshelf (>= 0.0.0)
+    opsworks_commons (>= 0.0.0)
+    opsworks_initial_setup (>= 0.0.0)
+    scm_helper (>= 0.0.0)
+  opsworks_ecs (1.0.0)
+  opsworks_ganglia (1.0.0)
     apache2 (>= 0.0.0)
-    ruby (>= 0.0.0)
+    opsworks_commons (>= 0.0.0)
+    opsworks_initial_setup (>= 0.0.0)
+  opsworks_initial_setup (1.0.0)
+    opsworks_commons (>= 0.0.0)
+  opsworks_java (1.0.0)
+    apache2 (>= 0.0.0)
+  opsworks_nodejs (1.0.0)
+    deploy (>= 0.0.0)
+    opsworks_commons (>= 0.0.0)
+  opsworks_postgresql (1.0.0)
+  opsworks_rubygems (1.0.0)
+    opsworks_initial_setup (>= 0.0.0)
+  opsworks_shutdown (1.0.0)
+    opsworks_agent_monit (>= 0.0.0)
+  opsworks_stack_state_sync (1.0.0)
+  packages (1.0.0)
+  passenger_apache2 (1.0.0)
+    apache2 (>= 0.0.0)
+    gem_support (>= 0.0.0)
+    nginx (>= 0.0.0)
+    opsworks_initial_setup (>= 0.0.0)
+    packages (>= 0.0.0)
+    rails (>= 0.0.0)
+    unicorn (>= 0.0.0)
+  php (1.0.0)
+    deploy (>= 0.0.0)
+  rails (1.0.0)
+    apache2 (>= 0.0.0)
+    deploy (>= 0.0.0)
+    nginx (>= 0.0.0)
   ruby (1.0.0)
+    opsworks_bundler (>= 0.0.0)
+    opsworks_commons (>= 0.0.0)
+    opsworks_initial_setup (>= 0.0.0)
+    opsworks_rubygems (>= 0.0.0)
+  s3_file (2.6.6)
+  scm_helper (1.0.0)
+    opsworks_commons (>= 0.0.0)
+    s3_file (>= 0.0.0)
   shared_assets (0.1.0)
   sidekiq (0.1.0)
+  ssh_host_keys (1.0.0)
+  ssh_users (1.0.0)
+    opsworks_commons (>= 0.0.0)
+    opsworks_initial_setup (>= 0.0.0)
+  test_suite (1.0.0)
+    opsworks_commons (>= 0.0.0)
+  unicorn (0.1.0)
   unicorn_lets_encrypt (1.0.0)
     apache2 (>= 0.0.0)
     nginx (>= 0.0.0)
